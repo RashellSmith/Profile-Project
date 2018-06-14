@@ -1,0 +1,144 @@
+/* Global Layout Set-up ------*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  color: #383838;
+  background: #f7f5f0;
+}
+
+h3 {
+    color: #383838;
+}
+
+p{
+  color:#8b8989;
+}
+
+phone email {
+  color:grey;
+}
+
+li a {
+  display: block;
+  min-width: 48px;
+  min-height: 48px;
+}
+
+/* Link Styles -------*/
+
+a {
+  text-decoration: none;
+  color:#383838;
+}
+a:hover {
+  color: #8b8989;
+}
+ /* Layout Styles ----- */
+.nav{
+    list-style-type: none;
+}
+
+.bottom{
+display:flex;
+flex-direction: row;
+justify-content: space-between
+font-size: 30px
+}
+
+
+
+
+/*  Media Queries  */
+
+/* small screens  */
+ @media screen and (min-width: 320px) {
+  body{
+    color:black;
+    background-color: white;
+    padding: 100px 120px
+    font-size: 30px
+
+  }
+
+  .card{
+    width: 90%;
+    align-content: center;
+  }
+  .card img{
+    max-width:100%;
+    padding-left: 10%;
+  }
+  p{
+    font-size: 30px
+  }
+
+}
+/*  medium screens */
+ @media screen and (min-width: 768px) {
+.body {
+  color:black;
+  background-color: red;
+  padding: 100px 120px
+}
+ .hwrapper{
+   padding: 50px;
+  width:100%;
+}
+
+.hdiv1{
+  display: inline-block;
+   max-width: 50%;
+   float:right;
+   padding: 50px;
+
+}
+.hdiv2{
+  display: inline-block;
+   max-width: 50%;
+   float:left;
+}
+
+.card{
+  display: inline-block;
+  width:50%;
+  margin-right:-4px;
+  vertical-align: top;
+  padding-left: 1em;
+  padding-right: 1em:
+  float:left;
+}
+.card img{
+  max-width: 100%;
+}
+
+
+
+}
+/*  large screens   */
+ @media screen and (min-width: 1024px) {
+
+.body{
+  color:black;
+  background-color: blue;
+  padding: 100px 120px
+}
+.card{
+  display: inline-block;
+  width:30%;
+  margin-right:-4px;
+  vertical-align: top;
+  padding-left: 1em;
+  padding-right: 1em:
+  float:left;
+}
+.card img{
+  max-width: 100%;
+}
+
+}
