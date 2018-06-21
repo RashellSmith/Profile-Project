@@ -4,13 +4,16 @@
 }
 
 body {
+
   margin: 0;
   padding: 0;
   text-align: center;
   font-family: 'Lato', sans-serif;
   color: #383838;
   /* background: #f7f5f0; */
-  background-image: url('images/background.svg')
+  background: url('../images/background.svg');
+  background-repeat:no-repeat;
+  background-size: cover;
 }
 
 h3 {
@@ -21,7 +24,7 @@ p{
   color:#8b8989;
 }
 
-phone email {
+phone, email {
   color:grey;
 }
 
