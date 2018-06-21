@@ -10,14 +10,17 @@
     <title>Student Name</title>
   </head>
   <body>
-    <div="main-nav">
-      <ul class= "nav">
-        <li><h1>Student Name</h1></li>
-        <li><a href="#top"><h2>Home</h2></a></li>
-        <li><a href="#body"><h2>Portfolio</h2></a></li>
-        <li><a href="#bottom"><h2>Contact</h2></a></li>
+      <ul class= "main-nav">
+        <li class="name"><h1><div class="studentname">
+          <input type="text" placeholder="What's Your Name?" id="txt_name" /><button>Enter</button>
+        </div></h1></li>
+        <div class="nav">
+          <li><a href="#top"><h2>Home</h2></a></li>
+          <li><a href="#body"><h2>Portfolio</h2></a></li>
+          <li><a href="#bottom"><h2>Contact</h2></a></li>
+          </div>
       </ul>
-    </div>
+
       <header class=hwrapper>
         <div class="hdiv1">
           <img src="images/responsive-layout-profile.png"/>
@@ -27,7 +30,7 @@
       </div>
       </header>
       <main class="body">
-        <h2>Portfolio</h2>
+        <h2 class="section-heading">Portfolio</h2>
         <div class="card">
          <img src="images/portfolio-1.png"/>
           <h2>Marketing Page</h2>
@@ -45,7 +48,7 @@
         </div>
         <div class="card">
            <img src="images/portfolio-4.png"/>
-          <h2>Map of Favorite Spots</h2>
+          <a href="maos.html"><h2>Map of Favorite Spots</h2></a>
           <p>This project uses mapping apis to plot points for my favorite spots in the city for a do-it-yourself walking tour.</p>
         </div>
         <div class="card">
@@ -61,14 +64,29 @@
 
       </main>
 <footer class ="contact">
-  <h3>Contact</h3>
+  <h2>Contact</h2>
   <p>If you're interested in chatting or want more infomation about what I've been working on, I'd love hear from you!</p>
   <p>Phone <phone>+(111) 555-1234</phone></p>
   <p>Email <email>email@yoursite.com</email></p>
 </footer>
 <div class="bottom">
-  <h3>Student name</h3>
-  <h3><a href=#top>Back To Top</a></h3>
+  <h3 ><div class="studentname">What's Your Name?</div></h3>
+  <h3 class="btt"><a href=#top>Back To Top</a></h3>
+  <h3><div class= "main-nav-btt">
+      <div class="nav-btt-items">
+        <a href="#top"><h2>Home</h2></a>
+      </div>
+      <div class="nav-btt-items">
+        <a href="#body"><h2>Portfolio</h2></a>
+      </div>
+      <div class="nav-btt-items">
+      <a href="#bottom"><h2>Contact</h2></a>
+      </div>
+      </div>
+  </h3>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="studentname.js"></script>
   </body>
 </html>
