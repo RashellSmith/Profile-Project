@@ -4,9 +4,6 @@
 }
 
 body {
-
-  margin: 0;
-  padding: 0;
   text-align: center;
   font-family: 'Lato', sans-serif;
   color: #383838;
@@ -24,8 +21,15 @@ p{
   color:#8b8989;
 }
 
-phone, email {
+.contact-info{
   color:grey;
+  font-weight: bold;
+  font-size: 120%;
+}
+.contact-txt{
+  color:black;
+  font-weight: bold;
+  font-size: 150%;
 }
 
 li a {
@@ -37,37 +41,82 @@ h2{
   text-align: center;
 
 }
-Email{
-  font-weight: bold;
-}
-Phone{
-  font-weight: bold;
-}
 
 /* Link Styles -------*/
 
 a {
   text-decoration: none;
-  color:#383838;
 }
 a:hover {
-  color: #8b8989;
+  color: gray;
 }
  /* Layout Styles ----- */
+.main-nav{
+  display:flex;
+  flex-direction:column;
+  margin-bottom: 50px;
+}
+.name {
+  display: block;
+  margin: 30px 50px;
+  font-size: 150% ;
+  min-width: 48px;
+  min-height: 48px;
+
+}
 .nav{
-    list-style-type: none;
+    display: flex;
+    flex-direction: column;
 }
-li{
-  list-style: none;
+.nav a{
+  color:white;
 }
+.nav a {
+  font-size: 150%;
+  min-width: 48px;
+  min-height: 48px;
+}
+
 .section-heading{
   padding-bottom: 50px;
 }
+
+.body{
+  margin: auto;
+  max-width: 92%;
+  padding: 10px;
+  clear:both;
+}
+header {
+  background: rgba(0, 0, 0, 0.6);
+  max-height: 90%;
+}
+.card{
+    width: 90%;
+    align-content: center;
+  }
+.card img{
+    max-width:100%;
+    padding-left: 10%;
+  }
+p{
+    font-size: 190%
+  }
 .bottom{
-display:flex;
-flex-direction: row;
-justify-content: space-between
-font-size: 30px
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between
+}
+.btt{
+  text-align: left;
+  padding-left: 300px;
+}
+.main-nav-btt{
+    display: none;
+}
+footer{
+  width: 90%;
+  align-content: center;
 }
 
 
@@ -75,89 +124,49 @@ font-size: 30px
 
 /*  Media Queries  */
 
-/* small screens  */
- @media screen and (min-width: 320px) {
-
-  .body{
-    clear:both;
-  }
-
-  .card{
-    width: 90%;
-    align-content: center;
-  }
-  .card img{
-    max-width:100%;
-    padding-left: 10%;
-  }
-  p{
-    font-size: 30px
-  }
-  .bottom{
-  display:flex;
-  flex-direction: row;
-  justify-content: space-between
-  }
-  .btt{
-    text-align: left;
-    padding-left: 300px;
-
-  }
-  .main-nav-btt{
-    display: none;
-  }
-  footer{
-    width: 90%;
-    align-content: center;
-  }
 
 
-}
 /*  medium screens */
- @media screen and (min-width: 768px) {
-
+@media screen and (min-width: 768px) {
 .nav{
   display: flex;
-  flex-direction: row
-  flex-wrap:wrap;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-li a{
+.nav a{
   min-width: 48px;
   max-width:48px;
   margin:50px;
 }
+
 .main-nav {
   width: 100%;
   min-height: 30px;
   padding: 10px;
   text-align: center;
-  list-style-type: none;
 }
-.nav .name {
+.name {
     display: block;
-    margin-right: auto;
+    margin:30px;
     width:100%;
-
- }
-
+}
  .hwrapper{
-   padding: 50px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 50px;
   width:100%;
 }
 
 .hdiv1{
   display: inline-block;
-   max-width: 50%;
-   float:right;
-   padding: 50px;
-
+  max-width: 50%;
+  float:right;
+  padding: 50px;
 }
 .hdiv2{
   display: inline-block;
-   max-width: 50%;
-   float:left;
+  max-width: 50%;
+  float:left;
 }
 
 .card{
@@ -166,7 +175,7 @@ li a{
   margin-right:-4px;
   vertical-align: top;
   padding-left: 1em;
-  padding-right: 1em:
+  padding-right: 1em;
   float:left;
 }
 .card img{
@@ -174,9 +183,9 @@ li a{
 }
 
 .bottom{
-display:flex;
-flex-direction: row;
-justify-content: space-between
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .btt{
@@ -185,8 +194,9 @@ justify-content: space-between
 .main-nav-btt{
   display:flex;
   flex-direction: row;
-  justify-content: space-between
-  width: 100%;
+  justify-content: space-between;
+  min-width: 10%;
+  padding-left: 30px;
   text-align: center;
 }
 .nav-btt-items{
@@ -200,61 +210,80 @@ justify-content: space-between
 /*  large screens   */
  @media screen and (min-width: 1024px) {
 
-   .nav{
-     display: flex;
-     flex-direction: row
-     flex-wrap:wrap;
+.main-nav {
+  width: 100%;
+  min-height: 30px;
+  padding: 10px;
+  text-align: center;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.name {
+  display:inline-flex;
+}
+.nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.nav a{
+  min-width: 48px;
+  max-width:48px;
+  margin:50px;
+}
+.hwrapper{
+  padding: 50px;
+  width:100%;
+}
+.hdiv1{
+  display: inline-block;
+  max-width: 50%;
+  float:right;
+  padding: 50px;
+}
+.hdiv2{
+  display: inline-block;
+  max-width: 50%;
+  float:left;
+}
 
-     align-items: flex-end;
+.card{
+  display: inline-block;
+  width:30%;
+  margin-right:-4px;
+  vertical-align: top;
+  padding-left: 1em;
+  padding-right: 1em;
+  float:left;
+  }
+.card img{
+  max-width: 100%;
    }
-   li a{
-     min-width: 48px;
-     max-width:48px;
-     margin:50px;
-   }
-   .main-nav {
-     width: 100%;
-     min-height: 30px;
-     padding: 10px;
-     text-align: center;
-     display:flex;
-     justify-content: space-between;
-   }
-   .nav .name {
-       display: block;
-       margin-right: auto;
-       width:100%;
+.contact{
+  clear:both;
+}
+.bottom{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.studentname{
+  min-width: 50%;
+  text-align: left;
+  font-size: 150%;
+}
+.btt{
+   display:none;
+}
+.main-nav-btt{
+  display:flex;
+  flex-direction: row;
 
-    }
-    .hwrapper{
-      padding: 50px;
-     width:100%;
-   }
+}
+.nav-btt-items{
+  font-size: 150%;
+}
 
-   .hdiv1{
-     display: inline-block;
-      max-width: 50%;
-      float:right;
-      padding: 50px;
-
-   }
-   .hdiv2{
-     display: inline-block;
-      max-width: 50%;
-      float:left;
-   }
-
-   .card{
-     display: inline-block;
-     width:50%;
-     margin-right:-4px;
-     vertical-align: top;
-     padding-left: 1em;
-     padding-right: 1em:
-     float:left;
-   }
-   .card img{
-     max-width: 100%;
-   }
 
 }
