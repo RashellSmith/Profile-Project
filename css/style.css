@@ -6,19 +6,18 @@
 body {
   text-align: center;
   font-family: 'Lato', sans-serif;
-  color: #383838;
-  /* background: #f7f5f0; */
+  color: white;
   background: url('../images/background.svg');
   background-repeat:no-repeat;
   background-size: cover;
 }
 
 h3 {
-    color: #383838;
+    color: white;
 }
 
 p{
-  color:#8b8989;
+  color:white;
 }
 
 .contact-info{
@@ -45,6 +44,7 @@ h2{
 /* Link Styles -------*/
 
 a {
+  color: white;
   text-decoration: none;
 }
 a:hover {
@@ -55,6 +55,9 @@ a:hover {
   display:flex;
   flex-direction:column;
   margin-bottom: 50px;
+  max-width: 90%;
+  max-height: 15%;
+  margin: auto;
 }
 .name {
   display: block;
@@ -65,8 +68,8 @@ a:hover {
 
 }
 .nav{
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 .nav a{
   color:white;
@@ -76,6 +79,12 @@ a:hover {
   min-width: 48px;
   min-height: 48px;
 }
+.hwrapper{
+  max-width: 90%;
+  max-height: 25%;
+  margin: auto;
+
+}
 
 .section-heading{
   padding-bottom: 50px;
@@ -83,14 +92,12 @@ a:hover {
 
 .body{
   margin: auto;
-  max-width: 92%;
-  padding: 10px;
+  max-width: 90%;
+  max-height: 40%;
+  background: rgba(0, 0, 0, 0.6);
   clear:both;
 }
-header {
-  background: rgba(0, 0, 0, 0.6);
-  max-height: 90%;
-}
+
 .card{
     width: 90%;
     align-content: center;
@@ -114,12 +121,25 @@ p{
 .main-nav-btt{
     display: none;
 }
+.contact{
+  clear:both;
+  padding: 10%;
+  max-width: 75%;
+  max-height: 25%;
+  margin: auto;
+}
 footer{
   width: 90%;
   align-content: center;
 }
 
+.hidepage{
+  display:none;
+}
 
+#rocketBody{
+  display: none;
+}
 
 
 /*  Media Queries  */
@@ -152,23 +172,37 @@ footer{
     width:100%;
 }
  .hwrapper{
-  background: rgba(0, 0, 0, 0.6);
+  /* background: rgba(0, 0, 0, 0.6);
   padding: 50px;
-  width:100%;
+  overflow: auto; */
 }
 
 .hdiv1{
   display: inline-block;
-  max-width: 50%;
+  max-width: 65%;
   float:right;
   padding: 50px;
+  margin: auto;
 }
-.hdiv2{
-  display: inline-block;
-  max-width: 50%;
-  float:left;
+.hdiv1 img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
 
+.hdiv2{
+  display: inline-block;
+  max-width: 35%;
+  float:left;
+  text-align: left;
+}
+
+.body{
+  background: rgba(0, 0, 0, 0.6);
+  padding: 50px;
+  overflow: auto;
+}
 .card{
   display: inline-block;
   width:50%;
@@ -234,7 +268,6 @@ footer{
 }
 .hwrapper{
   padding: 50px;
-  width:100%;
 }
 .hdiv1{
   display: inline-block;
@@ -260,9 +293,13 @@ footer{
 .card img{
   max-width: 100%;
    }
-.contact{
+/* .contact{
   clear:both;
-}
+  padding: 50px;
+  max-width: 40%;
+  max-height: 25%;
+  margin: auto;
+} */
 .bottom{
   display:flex;
   flex-direction: row;
@@ -283,6 +320,7 @@ footer{
 }
 .nav-btt-items{
   font-size: 150%;
+  color:  white;
 }
 
 
